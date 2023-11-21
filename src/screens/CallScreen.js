@@ -28,7 +28,10 @@ function CallScreen() {
     navigator.mediaDevices
       .getUserMedia({
         audio: true,
-        video: false,
+        video: {
+          width:350,
+          height:350
+        },
       })
       .then((stream) => {
         console.log("Local Stream found");
