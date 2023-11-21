@@ -10,7 +10,7 @@ function CallScreen() {
   const localVideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
 
-  const socket = socketio("http://localhost:9000/", {
+  const socket = socketio("http://13.200.37.225:5000/", {
     autoConnect: false,
   });
 
@@ -148,8 +148,8 @@ function CallScreen() {
     <div>
       <label>{"Username: " + localUsername}</label>
       <label>{"Room Id: " + roomName}</label>
-      <video autoPlay muted="muted" playsInline ref={localVideoRef} />
-      <video autoPlay muted="muted" playsInline ref={remoteVideoRef} />
+      <video autoPlay playsInline ref={localVideoRef} />
+      <video autoPlay playsInline ref={remoteVideoRef} />
     </div>
   );
 }
